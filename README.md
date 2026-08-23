@@ -18,7 +18,7 @@ This evaluation kit demonstrates the pure I/O layer of the Auriglyph engine. It 
 2. **Heap Allocation:** Exactly 0 bytes (proven via kernel-level `#[global_allocator]` interception).
 3. **Energy Efficiency:** < 3,000 pJ (picojoules) per byte (proven via kernel-level RAPL hooks).
 
-## 🚀 How to Reproduce (For YC Technical Partners)
+## How to Reproduce (For YC Technical Partners)
 
 **1. Generate the Mock Context State (4GB)**
 ```bash
