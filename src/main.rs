@@ -20,7 +20,7 @@ unsafe impl GlobalAlloc for TrackingAllocator {
 #[global_allocator]
 static GLOBAL: TrackingAllocator = TrackingAllocator;
 
-// Чтение аппаратного счетчика энергии (требует sudo)
+// Read hardware energy counter from RAPL MSR (requires sudo)
 fn read_energy_uj() -> u64 {
     std::fs::read_to_string("/sys/class/powercap/intel-rapl:0/energy_uj")
         .unwrap_or_else(|_| "0".to_string())
@@ -52,7 +52,7 @@ fn main() {
     let mmap = unsafe { MmapOptions::new().map(&file).unwrap() };
     ALLOCATED.store(0, Ordering::SeqCst);
     
-    // Замеряем энергию ИМЕННО перед началом сканирования, чтобы исключить 3 секунды сна
+    // Measure energy EXACTLY before the scan to exclude the 3-second sleep overhead
     let start_energy = read_energy_uj();
     let start_time = Instant::now();
     let mut _checksum: u64 = 0;
@@ -69,7 +69,7 @@ fn main() {
     let heap_used = ALLOCATED.load(Ordering::SeqCst);
     let mb_per_sec = (file_size as f64 / 1_048_576.0) / duration.as_secs_f64();
 
-    // Расчет энергоэффективности
+    // Calculate energy efficiency metrics
     let delta_uj = end_energy.saturating_sub(start_energy);
     let delta_pj = (delta_uj as u128) * 1_000_000;
     let pj_per_byte = if file_size > 0 && delta_pj > 0 { delta_pj / (file_size as u128) } else { 0 };
