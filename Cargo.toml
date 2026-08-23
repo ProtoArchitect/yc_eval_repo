@@ -1,0 +1,8 @@
+[package]
+name = "auriglyph_eval"
+version = "0.1.0"
+edition = "2021"
+description = "Evaluation kit for Auriglyph Zero-Allocation LLM State Engine"
+
+[dependencies]
+memmap2 = "0.7.1"
