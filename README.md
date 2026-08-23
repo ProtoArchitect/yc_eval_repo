@@ -2,7 +2,7 @@
 > This repository contains the benchmarking suite for the Auriglyph State Engine. It is provided exclusively for technical due diligence by Y Combinator and authorized partners. The core engine IP remains closed-source and proprietary. No commercial use is permitted.
 
 
-# 🪐 Auriglyph: Zero-Allocation State Compression Engine
+# Auriglyph: Zero-Allocation State Compression Engine
 
 > **WARNING: Hardware Telemetry Required**  
 > This benchmark reads hardware RAPL (Running Average Power Limit) MSR sensors to prove energy efficiency at the silicon level. **Linux with `sudo` is required to view energy metrics.** (On macOS, energy metrics will safely fallback to 0, but throughput and zero-heap verification will still execute).
