@@ -1,3 +1,7 @@
+> **Proprietary Evaluation Kit**
+> This repository contains the benchmarking suite for the Auriglyph State Engine. It is provided exclusively for technical due diligence by Y Combinator and authorized partners. The core engine IP remains closed-source and proprietary. No commercial use is permitted.
+
+
 # 🪐 Auriglyph: Zero-Allocation State Compression Engine
 
 > **WARNING: Hardware Telemetry Required**  
