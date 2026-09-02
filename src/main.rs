@@ -80,7 +80,7 @@ fn read_energy_uj() -> u64 {
 }
 
 fn main() {
-    let file_path = "./universal_semantic_codebook.bin";
+    let file_path = "./dummy_dataset.bin";
     let iterations = 50;
 
     println!("\x1b[1;36m============================================================\x1b[0m");

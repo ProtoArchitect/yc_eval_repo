@@ -3,7 +3,7 @@
 
 # Ignore massive synthetic datasets
 *.bin
-universal_semantic_codebook.bin
+dummy_dataset.bin
 
 # OS generated files
 .DS_Store
@@ -12,3 +12,7 @@ Thumbs.db
 # Backup files
 *.rs.bk
 *.jsonl
+
+*.npy
+*.csv
+*.db

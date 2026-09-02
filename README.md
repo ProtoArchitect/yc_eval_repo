@@ -24,7 +24,7 @@ This evaluation kit demonstrates the pure I/O layer of the Auriglyph engine. It 
 ```bash
 ./setup_eval_dataset.sh
 ```
-*(This creates a 4GB `universal_semantic_codebook.bin` file to simulate a massive LLM context window).*
+*(This creates a 4GB `dummy_dataset.bin` file to simulate a massive LLM context window).*
 
 **2. Run the Hardware Benchmark**
 ```bash
